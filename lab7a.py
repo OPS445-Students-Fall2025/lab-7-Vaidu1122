@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Student ID: [seneca_id]
+# Student ID: vpatel278
 class Time:
     """Simple object type for time of the day.
     data attributes: hour, minute, second
@@ -16,11 +16,24 @@ def format_time(t):
 
 def sum_times(t1, t2):
     """Add two time objests and return the sum."""
-    sum = Time(0,0,0)
-    sum.hour = t1.hour + t2.hour
-    sum.minute = t1.minute + t2.minute
-    sum.second = t1.second + t2.second
-    return sum
+    total = Time(0,0,0)
+    total.hour = t1.hour + t2.hour
+    total.minute = t1.minute + t2.minute
+    total.second = t1.second + t2.second
+
+    # carry seconds → minutes
+    if total.second >= 60:
+        carry_min = total.second // 60
+        total.second = total.second % 60
+        total.minute += carry_min
+
+    # carry minutes → hours
+    if total.minute >= 60:
+        carry_hr = total.minute // 60
+        total.minute = total.minute % 60
+        total.hour += carry_hr
+    
+    return total
 
 def valid_time(t):
     """check for the validity of the time object attributes:
