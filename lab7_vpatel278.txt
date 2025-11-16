@@ -86,6 +86,16 @@ test_b2_run (__main__.lab7i.test_b2_run)
 [Lab 7] - [Investigation 3] - [Part 3] - Global scope - Test for correct output: ./lab7i.py ... ok
 
 ----------------------------------------------------------------------
-Ran 43 tests in 0.055s
+Ran 43 tests in 0.135s
 
 OK
+OPS445 Lab Report - System Information for running ./CheckLab7.py
+=================================================================
+    User login name: vpatel278
+    Linux system name: Vaidehi-Zephyrus
+    Python executable: /usr/bin/python3
+    Python version: 3123
+    OS Platform: linux
+    Working Directory: /home/vpatel278/ops445/old_lab7
+    Start at: Sat Nov 15 21:10:56 2025
+=================================================================
